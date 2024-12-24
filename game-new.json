@@ -1,0 +1,200 @@
+{
+  "node_1": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꏦ",
+    "connections": ["node_1_2", "node_1_11", "node_1_3", "node_1_10"]
+  },
+  "node_2": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꅉ",
+    "connections": ["node_1_2", "node_2_3", "node_2_4", "node_2_11"]
+  },
+  "node_3": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꅵ",
+    "connections": ["node_1_3", "node_2_3", "node_3_4", "node_3_5"]
+  },
+  "node_4": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꇐ",
+    "connections": ["node_2_4", "node_3_4", "node_4_5", "node_4_6"]
+  },
+  "node_5": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꐯ",
+    "connections": ["node_3_5", "node_4_5", "node_5_6", "node_5_7"]
+  },
+  "node_6": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꁸ",
+    "connections": ["node_4_6", "node_5_6", "node_6_7", "node_6_8"]
+  },
+  "node_7": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꂚ",
+    "connections": ["node_5_7", "node_6_7", "node_7_8", "node_7_9"]
+  },
+  "node_8": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꂊ",
+    "connections": ["node_6_8", "node_7_8", "node_8_9", "node_8_10"]
+  },
+  "node_9": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꆜ",
+    "connections": ["node_7_9", "node_8_9", "node_9_10", "node_9_11"]
+  },
+  "node_10": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꀆ",
+    "connections": ["node_1_10", "node_8_10", "node_9_10", "node_10_11"]
+  },
+  "node_11": {
+    "main": true,
+    "enabled": "true",
+    "symbol": "ꁒ",
+    "connections": ["node_1_11", "node_2_11", "node_9_11", "node_10_11"]
+  },
+  "node_1_2": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ሾ",
+    "connections": ["node_1", "node_2"]
+  },
+  "node_1_11": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ኯ",
+    "connections": ["node_1", "node_11"]
+  },
+  "node_1_3": {
+    "main": false,
+    "enabled": false,
+    "symbol": "፵",
+    "connections": ["node_1", "node_3"]
+  },
+  "node_1_10": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ፌ",
+    "connections": ["node_1", "node_10"]
+  },
+  "node_2_3": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ኇ",
+    "connections": ["node_2", "node_3"]
+  },
+  "node_2_4": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ጁ",
+    "connections": ["node_2", "node_4"]
+  },
+  "node_2_11": {
+    "main": false,
+    "enabled": false,
+    "symbol": "፼",
+    "connections": ["node_2", "node_11"]
+  },
+  "node_3_4": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ዌ",
+    "connections": ["node_3", "node_4"]
+  },
+  "node_3_5": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ዥ",
+    "connections": ["node_3", "node_5"]
+  },
+  "node_4_5": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ቾ",
+    "connections": ["node_4", "node_5"]
+  },
+  "node_4_6": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ፚ",
+    "connections": ["node_4", "node_6"]
+  },
+  "node_5_6": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ዽ",
+    "connections": ["node_5", "node_6"]
+  },
+  "node_5_7": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ዟ",
+    "connections": ["node_5", "node_7"]
+  },
+  "node_6_7": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ጮ",
+    "connections": ["node_6", "node_7"]
+  },
+  "node_6_8": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ዪ",
+    "connections": ["node_6", "node_8"]
+  },
+  "node_7_8": {
+    "main": false,
+    "enabled": true,
+    "symbol": "፬",
+    "connections": ["node_7", "node_8"]
+  },
+  "node_7_9": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ሙ",
+    "connections": ["node_7", "node_9"]
+  },
+  "node_8_9": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ፄ",
+    "connections": ["node_8", "node_9"]
+  },
+  "node_8_10": {
+    "main": false,
+    "enabled": false,
+    "symbol": "ጏ",
+    "connections": ["node_8", "node_10"]
+  },
+  "node_9_10": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ጧ",
+    "connections": ["node_9", "node_10"]
+  },
+  "node_9_11": {
+    "main": false,
+    "enabled": false,
+    "symbol": "፴",
+    "connections": ["node_9", "node_11"]
+  },
+  "node_10_11": {
+    "main": false,
+    "enabled": true,
+    "symbol": "ሄ",
+    "connections": ["node_10", "node_11"]
+  }
+}
