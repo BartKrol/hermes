@@ -1,21 +1,20 @@
 import Header from "@/components/header";
-import { Button } from "@/components/ui/button";
+import { ResearchInput } from "@/components/research-input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { checkAuthentication } from "@/lib/permissions";
 
-export default function Home() {
+export default async function Home() {
+  await checkAuthentication();
+
   return (
     <div className="flex flex-col min-h-screen justify-between">
       <Header />
       <main className="flex flex-col container mx-auto px-4 flex-grow gap-8">
         <div className="py-4 px-2">
           <h2 className="text-2xl font-semibold mb-4">Przybornk Badawczy</h2>
-          <div className="flex flex-row justify-between">
-            <Input placeholder="Liczba" type="number" />
-            <Button>Zbadaj</Button>
-          </div>
         </div>
+        <ResearchInput />
         <div>
           <h2 className="text-2xl font-semibold mb-4">Symbol Badawczy</h2>
           <Card className="m-4">

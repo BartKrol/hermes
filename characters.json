@@ -1,0 +1,127 @@
+{
+  "lawson": {
+    "node": "node_1",
+    "name": "Nick Lawson",
+    "symbol": "ꏦ",
+    "symbols": [
+      { "number": 64, "symbol": "ሾ" },
+      { "number": 16, "symbol": "ኯ" },
+      { "number": 15, "symbol": "፵" },
+      { "number": 59, "symbol": "ፌ" }
+    ]
+  },
+  "hayes": {
+    "node": "node_2",
+    "name": "Emily Hayes",
+    "symbol": "ꅉ",
+    "symbols": [
+      { "number": 66, "symbol": "ኇ" },
+      { "number": 77, "symbol": "ሾ" },
+      { "number": 65, "symbol": "ጁ" },
+      { "number": 20, "symbol": "፼" }
+    ]
+  },
+  "kane": {
+    "node": "node_3",
+    "name": "Marcus Kane",
+    "symbol": "ꅵ",
+    "symbols": [
+      { "number": 56, "symbol": "ዌ" },
+      { "number": 68, "symbol": "ኇ" },
+      { "number": 28, "symbol": "ዥ" },
+      { "number": 25, "symbol": "፵" }
+    ]
+  },
+  "whitman": {
+    "node": "node_4",
+    "name": "Samuel Whitman",
+    "symbol": "ꇐ",
+    "symbols": [
+      { "number": 83, "symbol": "ቾ" },
+      { "number": 97, "symbol": "ዌ" },
+      { "number": 12, "symbol": "ፚ" },
+      { "number": 94, "symbol": "ጁ" }
+    ]
+  },
+  "callahan": {
+    "node": "node_5",
+    "name": "David Callahan",
+    "symbol": "ꐯ",
+    "symbols": [
+      { "number": 28, "symbol": "ዽ" },
+      { "number": 89, "symbol": "ቾ" },
+      { "number": 94, "symbol": "ዟ" },
+      { "number": 33, "symbol": "ዥ" }
+    ]
+  },
+  "ortega": {
+    "node": "node_6",
+    "name": "Rachel Ortega",
+    "symbol": "ꁸ",
+    "symbols": [
+      { "number": 22, "symbol": "ጮ" },
+      { "number": 64, "symbol": "ዽ" },
+      { "number": 34, "symbol": "ዪ" },
+      { "number": 13, "symbol": "ፚ" }
+    ]
+  },
+  "reyes": {
+    "node": "node_7",
+    "name": "Ava Reyes",
+    "symbol": "ꂚ",
+    "symbols": [
+      { "number": 41, "symbol": "፬" },
+      { "number": 25, "symbol": "ጮ" },
+      { "number": 77, "symbol": "ሙ" },
+      { "number": 98, "symbol": "ዟ" }
+    ]
+  },
+  "kline": {
+    "node": "node_8",
+    "name": "Noah Kline",
+    "symbol": "ꂊ",
+    "symbols": [
+      [
+        { "number": 82, "symbol": "ፄ" },
+        { "number": 85, "symbol": "፬" },
+        { "number": 16, "symbol": "ጏ" },
+        { "number": 40, "symbol": "ዪ" }
+      ]
+    ]
+  },
+  "marlowe": {
+    "node": "node_9",
+    "name": "Elena Marlowe",
+    "symbol": "ꆜ",
+    "symbols": [
+      [
+        { "number": 85, "symbol": "ጧ" },
+        { "number": 99, "symbol": "ፄ" },
+        { "number": 11, "symbol": "፴" },
+        { "number": 92, "symbol": "ሙ" }
+      ]
+    ]
+  },
+  "mercer": {
+    "node": "node_10",
+    "name": "Ethan Mercer",
+    "symbol": "ꀆ",
+    "symbols": [
+      { "number": 12, "symbol": "ሄ" },
+      { "number": 91, "symbol": "ጧ" },
+      { "number": 71, "symbol": "ፌ" },
+      { "number": 46, "symbol": "ጏ" }
+    ]
+  },
+  "daley": {
+    "node": "node_11",
+    "name": "Victoria Daley",
+    "symbol": "ꁒ",
+    "symbols": [
+      { "number": 26, "symbol": "ኯ" },
+      { "number": 17, "symbol": "ሄ" },
+      { "number": 21, "symbol": "፼" },
+      { "number": 18, "symbol": "፴" }
+    ]
+  }
+}

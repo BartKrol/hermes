@@ -2,304 +2,489 @@
   "nodes": {
     "node_1": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꏦ",
-      "edges": ["edge_1"]
+      "symbol": "ꏦ"
     },
     "node_2": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꅉ",
-      "edges": ["edge_2"]
+      "symbol": "ꅉ"
     },
     "node_3": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꅵ",
-      "edges": ["edge_3"]
+      "symbol": "ꅵ"
     },
     "node_4": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꇐ",
-      "edges": ["edge_4"]
+      "symbol": "ꇐ"
     },
     "node_5": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꐯ",
-      "edges": ["edge_5"]
+      "symbol": "ꐯ"
     },
     "node_6": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꁸ",
-      "edges": ["edge_6"]
+      "symbol": "ꁸ"
     },
     "node_7": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꂚ",
-      "edges": ["edge_7"]
+      "symbol": "ꂚ"
     },
     "node_8": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꂊ",
-      "edges": ["edge_8"]
+      "symbol": "ꂊ"
     },
     "node_9": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꆜ",
-      "edges": ["edge_9"]
+      "symbol": "ꆜ"
     },
     "node_10": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꀆ",
-      "edges": ["edge_10"]
+      "symbol": "ꀆ"
     },
     "node_11": {
       "main": true,
-      "enabled": "true",
-      "symbol": "ꁒ",
-      "edges": ["edge_11"]
+      "symbol": "ꁒ"
     },
     "node_1_2": {
       "main": false,
-      "enabled": true,
       "symbol": "ሾ",
-      "connections": []
+      "color": "node_2"
     },
     "node_1_11": {
       "main": false,
-      "enabled": true,
       "symbol": "ኯ",
-      "connections": {}
+      "color": "node_1"
     },
     "node_1_3": {
       "main": false,
-      "enabled": false,
       "symbol": "፵",
-      "connections": ["node_1", "node_3"]
+      "color": "node_1"
     },
     "node_1_10": {
       "main": false,
-      "enabled": false,
       "symbol": "ፌ",
-      "connections": ["node_1", "node_10"]
+      "color": "node_10"
     },
     "node_2_3": {
       "main": false,
-      "enabled": true,
       "symbol": "ኇ",
-      "connections": ["node_2", "node_3"]
+      "color": "node_3"
     },
     "node_2_4": {
       "main": false,
-      "enabled": false,
       "symbol": "ጁ",
-      "connections": ["node_2", "node_4"]
+      "color": "node_2"
     },
     "node_2_11": {
       "main": false,
-      "enabled": false,
       "symbol": "፼",
-      "connections": ["node_2", "node_11"]
+      "color": "node_2"
     },
     "node_3_4": {
       "main": false,
-      "enabled": true,
       "symbol": "ዌ",
-      "connections": ["node_3", "node_4"]
+      "color": "node_4"
     },
     "node_3_5": {
       "main": false,
-      "enabled": false,
       "symbol": "ዥ",
-      "connections": ["node_3", "node_5"]
+      "color": "node_3"
     },
     "node_4_5": {
       "main": false,
-      "enabled": true,
       "symbol": "ቾ",
-      "connections": ["node_4", "node_5"]
+      "color": "node_5"
     },
     "node_4_6": {
       "main": false,
-      "enabled": false,
       "symbol": "ፚ",
-      "connections": ["node_4", "node_6"]
+      "color": "node_4"
     },
     "node_5_6": {
       "main": false,
-      "enabled": true,
       "symbol": "ዽ",
-      "connections": ["node_5", "node_6"]
+      "color": "node_6"
     },
     "node_5_7": {
       "main": false,
-      "enabled": false,
       "symbol": "ዟ",
-      "connections": ["node_5", "node_7"]
+      "color": "node_5"
     },
     "node_6_7": {
       "main": false,
-      "enabled": true,
       "symbol": "ጮ",
-      "connections": ["node_6", "node_7"]
+      "color": "node_7"
     },
     "node_6_8": {
       "main": false,
-      "enabled": false,
       "symbol": "ዪ",
-      "connections": ["node_6", "node_8"]
+      "color": "node_6"
     },
     "node_7_8": {
       "main": false,
-      "enabled": true,
       "symbol": "፬",
-      "connections": ["node_7", "node_8"]
+      "color": "node_7"
     },
     "node_7_9": {
       "main": false,
-      "enabled": false,
       "symbol": "ሙ",
-      "connections": ["node_7", "node_9"]
+      "color": "node_7"
     },
     "node_8_9": {
       "main": false,
-      "enabled": true,
       "symbol": "ፄ",
-      "connections": ["node_8", "node_9"]
+      "color": "node_8"
     },
     "node_8_10": {
       "main": false,
-      "enabled": false,
       "symbol": "ጏ",
-      "connections": ["node_8", "node_10"]
+      "color": "node_8"
     },
     "node_9_10": {
       "main": false,
-      "enabled": true,
       "symbol": "ጧ",
-      "connections": ["node_9", "node_10"]
+      "color": "node_9"
     },
     "node_9_11": {
       "main": false,
-      "enabled": false,
       "symbol": "፴",
-      "connections": ["node_9", "node_11"]
+      "color": "node_9"
     },
     "node_10_11": {
       "main": false,
-      "enabled": true,
       "symbol": "ሄ",
-      "connections": ["node_10", "node_11"]
-    },
-    "center": {
-      "connections": [
-        {
-          "node": "node_1_11",
-          "color": "node_1"
-        },
-        {
-          "node": "node_1_2",
-          "color": "node_2"
-        },
-        {
-          "node": "node_2_3",
-          "color": "node_3"
-        },
-        {
-          "node": "node_3_4",
-          "color": "node_4"
-        },
-        {
-          "node": "node_4_5",
-          "color": "node_5"
-        },
-        {
-          "node": "node_5_6",
-          "color": "node_6"
-        },
-        {
-          "node": "node_6_7",
-          "color": "node_7"
-        },
-        {
-          "node": "node_7_8",
-          "color": "node_8"
-        },
-        {
-          "node": "node_8_9",
-          "color": "node_9"
-        },
-        {
-          "node": "node_9_10",
-          "color": "node_10"
-        },
-        {
-          "node": "node_10_11",
-          "color": "node_11"
-        }
-      ]
+      "color": "node_10"
     }
   },
   "edges": {
-    "edge_1_1_2": {
+    "edge_main_node_1": {
       "nodes": ["node_1", "node_1_2"],
-      "color": "node_1"
+      "color": "node_1",
+      "variable": false
     },
-    "edge_2_2_3": {
-      "nodes": ["node_2", "node_2_3"],
-      "color": "node_2"
-    },
-    "edge_3_3_4": {
-      "nodes": ["node_3", "node_3_4"],
-      "color": "node_3"
-    },
-    "edge_4_4_5": {
-      "nodes": ["node_4", "node_4_5"],
-      "color": "node_4"
-    },
-    "edge_5_5_6": {
-      "nodes": ["node_5", "node_5_6"],
-      "color": "node_5"
-    },
-    "edge_6_6_7": {
-      "nodes": ["node_6", "node_6_7"],
-      "color": "node_6"
-    },
-    "edge_7_7_8": {
-      "nodes": ["node_7", "node_7_8"],
-      "color": "node_7"
-    },
-    "edge_8_8_9": {
-      "nodes": ["node_8", "node_8_9"],
-      "color": "node_8"
-    },
-    "edge_9_9_10": {
-      "nodes": ["node_9", "node_9_10"],
-      "color": "node_9"
-    },
-    "edge_10_10_11": {
-      "nodes": ["node_10", "node_10_11"],
-      "color": "node_10"
-    },
-    "edge_11_11_1": {
-      "nodes": ["node_11", "node_1_11"],
-      "color": "node_11"
-    },
-    "edge_1_2_1_10": {
+    "edge_second_node_1": {
       "nodes": ["node_1_2", "node_1_10"],
-      "color": "node_1"
+      "color": "node_1",
+      "variable": false
     },
-    "edge_1_2_center": {
+    "edge_third_node_1": {
+      "nodes": ["node_1_10", "node_1_11"],
+      "color": "node_1",
+      "variable": false
+    },
+    "edge_center_node_1": {
+      "nodes": ["node_1_11", "center"],
+      "color": "node_1",
+      "variable": true
+    },
+    "edge_alternative_node_1": {
+      "nodes": ["node_1_11", "node_1_3"],
+      "color": "node_1",
+      "variable": true
+    },
+    "edge_alternative_center_node_1": {
+      "nodes": ["node_1_3", "center"],
+      "color": "node_1",
+      "variable": true
+    },
+    "edge_main_node_2": {
+      "nodes": ["node_2", "node_2_3"],
+      "color": "node_2",
+      "variable": false
+    },
+    "edge_second_node_2": {
+      "nodes": ["node_2_3", "node_2_11"],
+      "color": "node_2",
+      "variable": false
+    },
+    "edge_third_node_2": {
+      "nodes": ["node_2_11", "node_1_2"],
+      "color": "node_2",
+      "variable": false
+    },
+    "edge_center_node_2": {
       "nodes": ["node_1_2", "center"],
-      "color": "node_2"
+      "color": "node_2",
+      "variable": true
     },
-    "edge_1_2_"
+    "edge_alternative_node_2": {
+      "nodes": ["node_1_2", "node_2_4"],
+      "color": "node_2",
+      "variable": true
+    },
+    "edge_alternative_center_node_2": {
+      "nodes": ["node_2_4", "center"],
+      "color": "node_2",
+      "variable": true
+    },
+    "edge_main_node_3": {
+      "nodes": ["node_3", "node_3_4"],
+      "color": "node_3",
+      "variable": false
+    },
+    "edge_second_node_3": {
+      "nodes": ["node_3_4", "node_1_3"],
+      "color": "node_3",
+      "variable": false
+    },
+    "edge_third_node_3": {
+      "nodes": ["node_1_3", "node_2_3"],
+      "color": "node_3",
+      "variable": false
+    },
+    "edge_center_node_3": {
+      "nodes": ["node_2_3", "center"],
+      "color": "node_3",
+      "variable": true
+    },
+    "edge_alternative_node_3": {
+      "nodes": ["node_2_3", "node_3_5"],
+      "color": "node_3",
+      "variable": true
+    },
+    "edge_alternative_center_node_3": {
+      "nodes": ["node_3_5", "center"],
+      "color": "node_3",
+      "variable": true
+    },
+    "edge_main_node_4": {
+      "nodes": ["node_4", "node_4_5"],
+      "color": "node_4",
+      "variable": false
+    },
+    "edge_second_node_4": {
+      "nodes": ["node_4_5", "node_2_4"],
+      "color": "node_4",
+      "variable": false
+    },
+    "edge_third_node_4": {
+      "nodes": ["node_2_4", "node_3_4"],
+      "color": "node_4",
+      "variable": false
+    },
+    "edge_center_node_4": {
+      "nodes": ["node_3_4", "center"],
+      "color": "node_4",
+      "variable": true
+    },
+    "edge_alternative_node_4": {
+      "nodes": ["node_3_4", "node_4_6"],
+      "color": "node_4",
+      "variable": true
+    },
+    "edge_alternative_center_node_4": {
+      "nodes": ["node_4_6", "center"],
+      "color": "node_4",
+      "variable": true
+    },
+    "edge_main_node_5": {
+      "nodes": ["node_5", "node_5_6"],
+      "color": "node_5",
+      "variable": false
+    },
+    "edge_second_node_5": {
+      "nodes": ["node_5_6", "node_3_5"],
+      "color": "node_5",
+      "variable": false
+    },
+    "edge_third_node_5": {
+      "nodes": ["node_3_5", "node_4_5"],
+      "color": "node_5",
+      "variable": false
+    },
+    "edge_center_node_5": {
+      "nodes": ["node_4_5", "center"],
+      "color": "node_5",
+      "variable": true
+    },
+    "edge_alternative_node_5": {
+      "nodes": ["node_4_5", "node_5_7"],
+      "color": "node_5",
+      "variable": true
+    },
+    "edge_alternative_center_node_5": {
+      "nodes": ["node_5_7", "center"],
+      "color": "node_5",
+      "variable": true
+    },
+    "edge_main_node_6": {
+      "nodes": ["node_6", "node_6_7"],
+      "color": "node_6",
+      "variable": false
+    },
+    "edge_second_node_6": {
+      "nodes": ["node_6_7", "node_4_6"],
+      "color": "node_6",
+      "variable": false
+    },
+    "edge_third_node_6": {
+      "nodes": ["node_4_6", "node_5_6"],
+      "color": "node_6",
+      "variable": false
+    },
+    "edge_center_node_6": {
+      "nodes": ["node_5_6", "center"],
+      "color": "node_6",
+      "variable": true
+    },
+    "edge_alternative_node_6": {
+      "nodes": ["node_5_6", "node_6_8"],
+      "color": "node_6",
+      "variable": true
+    },
+    "edge_alternative_center_node_6": {
+      "nodes": ["node_6_8", "center"],
+      "color": "node_6",
+      "variable": true
+    },
+    "edge_main_node_7": {
+      "nodes": ["node_7", "node_7_8"],
+      "color": "node_7",
+      "variable": false
+    },
+    "edge_second_node_7": {
+      "nodes": ["node_7_8", "node_5_7"],
+      "color": "node_7",
+      "variable": false
+    },
+    "edge_third_node_7": {
+      "nodes": ["node_5_7", "node_6_7"],
+      "color": "node_7",
+      "variable": false
+    },
+    "edge_center_node_7": {
+      "nodes": ["node_6_7", "center"],
+      "color": "node_7",
+      "variable": true
+    },
+    "edge_alternative_node_7": {
+      "nodes": ["node_6_7", "node_7_9"],
+      "color": "node_7",
+      "variable": true
+    },
+    "edge_alternative_center_node_7": {
+      "nodes": ["node_7_9", "center"],
+      "color": "node_7",
+      "variable": true
+    },
+    "edge_main_node_8": {
+      "nodes": ["node_8", "node_8_9"],
+      "color": "node_8",
+      "variable": false
+    },
+    "edge_second_node_8": {
+      "nodes": ["node_8_9", "node_6_8"],
+      "color": "node_8",
+      "variable": false
+    },
+    "edge_third_node_8": {
+      "nodes": ["node_6_8", "node_7_8"],
+      "color": "node_8",
+      "variable": false
+    },
+    "edge_center_node_8": {
+      "nodes": ["node_7_8", "center"],
+      "color": "node_8",
+      "variable": true
+    },
+    "edge_alternative_node_8": {
+      "nodes": ["node_7_8", "node_8_10"],
+      "color": "node_8",
+      "variable": true
+    },
+    "edge_alternative_center_node_8": {
+      "nodes": ["node_8_10", "center"],
+      "color": "node_8",
+      "variable": true
+    },
+    "edge_main_node_9": {
+      "nodes": ["node_9", "node_9_10"],
+      "color": "node_9",
+      "variable": false
+    },
+    "edge_second_node_9": {
+      "nodes": ["node_9_10", "node_7_9"],
+      "color": "node_9",
+      "variable": false
+    },
+    "edge_third_node_9": {
+      "nodes": ["node_7_9", "node_8_9"],
+      "color": "node_9",
+      "variable": false
+    },
+    "edge_center_node_9": {
+      "nodes": ["node_8_9", "center"],
+      "color": "node_9",
+      "variable": true
+    },
+    "edge_alternative_node_9": {
+      "nodes": ["node_8_9", "node_9_11"],
+      "color": "node_9",
+      "variable": true
+    },
+    "edge_alternative_center_node_9": {
+      "nodes": ["node_9_11", "center"],
+      "color": "node_9",
+      "variable": true
+    },
+    "edge_main_node_10": {
+      "nodes": ["node_10", "node_10_11"],
+      "color": "node_10",
+      "variable": false
+    },
+    "edge_second_node_10": {
+      "nodes": ["node_10_11", "node_8_10"],
+      "color": "node_10",
+      "variable": false
+    },
+    "edge_third_node_10": {
+      "nodes": ["node_8_10", "node_9_10"],
+      "color": "node_10",
+      "variable": false
+    },
+    "edge_center_node_10": {
+      "nodes": ["node_9_10", "center"],
+      "color": "node_10",
+      "variable": true
+    },
+    "edge_alternative_node_10": {
+      "nodes": ["node_9_10", "node_1_10"],
+      "color": "node_10",
+      "variable": true
+    },
+    "edge_alternative_center_node_10": {
+      "nodes": ["node_1_10", "center"],
+      "color": "node_10",
+      "variable": true
+    },
+    "edge_main_node_11": {
+      "nodes": ["node_11", "node_1_11"],
+      "color": "node_11",
+      "variable": false
+    },
+    "edge_second_node_11": {
+      "nodes": ["node_1_11", "node_9_11"],
+      "color": "node_11",
+      "variable": false
+    },
+    "edge_third_node_11": {
+      "nodes": ["node_9_11", "node_10_11"],
+      "color": "node_11",
+      "variable": false
+    },
+    "edge_center_node_11": {
+      "nodes": ["node_10_11", "center"],
+      "color": "node_11",
+      "variable": true
+    },
+    "edge_alternative_node_11": {
+      "nodes": ["node_10_11", "node_2_11"],
+      "color": "node_11",
+      "variable": true
+    },
+    "edge_alternative_center_node_11": {
+      "nodes": ["node_2_11", "center"],
+      "color": "node_11",
+      "variable": true
+    }
   }
 }
