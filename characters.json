@@ -81,12 +81,10 @@
     "name": "Noah Kline",
     "symbol": "ꂊ",
     "symbols": [
-      [
-        { "number": 82, "symbol": "ፄ" },
-        { "number": 85, "symbol": "፬" },
-        { "number": 16, "symbol": "ጏ" },
-        { "number": 40, "symbol": "ዪ" }
-      ]
+      { "number": 82, "symbol": "ፄ" },
+      { "number": 85, "symbol": "፬" },
+      { "number": 16, "symbol": "ጏ" },
+      { "number": 40, "symbol": "ዪ" }
     ]
   },
   "marlowe": {
@@ -94,12 +92,10 @@
     "name": "Elena Marlowe",
     "symbol": "ꆜ",
     "symbols": [
-      [
-        { "number": 85, "symbol": "ጧ" },
-        { "number": 99, "symbol": "ፄ" },
-        { "number": 11, "symbol": "፴" },
-        { "number": 92, "symbol": "ሙ" }
-      ]
+      { "number": 85, "symbol": "ጧ" },
+      { "number": 99, "symbol": "ፄ" },
+      { "number": 11, "symbol": "፴" },
+      { "number": 92, "symbol": "ሙ" }
     ]
   },
   "mercer": {

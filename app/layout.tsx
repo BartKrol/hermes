@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hermes",
+  title: "Misja Hermes",
   description: "Misja Badawcza",
 };
 

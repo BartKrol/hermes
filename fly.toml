@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for hermes on 2024-12-28T22:29:56+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'hermes'
+primary_region = 'waw'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[mounts]
+  source="storage"
+  destination="/mnt/storage"
+
+[deploy]
+  release_command = "touch /mnt/storage/production.sqlite && npm run db:push"

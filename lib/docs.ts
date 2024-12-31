@@ -1,17 +1,6 @@
 import "dotenv/config";
 
 import { google } from "googleapis";
-import path from "path";
-
-const auth = new google.auth.GoogleAuth({
-  keyFile: path.join(
-    process.cwd(),
-    process.env.GOOGLE_APPLICATION_CREDENTIALS || ""
-  ),
-  scopes: ["https://www.googleapis.com/auth/documents.readonly"],
-});
-
-const docs = google.docs({ version: "v1", auth });
 
 export type GoogleDocContent = {
   title: string;
@@ -19,6 +8,14 @@ export type GoogleDocContent = {
 };
 
 export async function getDoc(docId: string) {
+  console.log(JSON.parse(process.env.GOOGLE_CREDENTIALS!));
+  const auth = new google.auth.GoogleAuth({
+    credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS || "{}"),
+    scopes: ["https://www.googleapis.com/auth/documents.readonly"],
+  });
+
+  const docs = google.docs({ version: "v1", auth });
+
   if (!docId || typeof docId !== "string") {
     throw new Error("Document ID is required");
   }

@@ -5,3 +5,9 @@ export const activeEdgesTable = sqliteTable("active_edges", {
   name: text().notNull(),
   active: int().notNull(),
 });
+
+// export const envelopeTable = sqliteTable("envelopes", {
+//   id: text().primaryKey(),
+//   title: text().notNull(),
+//   body: text().notNull(),
+// });

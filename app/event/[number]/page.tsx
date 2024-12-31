@@ -1,7 +1,11 @@
 import { getEnvelopeData } from "@/actions/envelopeAction";
+import { auth } from "@/auth";
 import Header from "@/components/header";
 import { checkAuthentication } from "@/lib/permissions";
 import { cn } from "@/lib/utils";
+import { FirstChoice } from "./FirstChoice";
+
+export const dynamic = "force-dynamic";
 
 export type EventPageProps = {
   params: Promise<{ number: string }>;
@@ -9,9 +13,17 @@ export type EventPageProps = {
 
 export default async function EventPage({ params }: EventPageProps) {
   await checkAuthentication();
+
   const { number } = await params;
+
+  const session = await auth();
+
   try {
-    const doc = await getEnvelopeData(number);
+    const { doc, envelope } = await getEnvelopeData(
+      number,
+      session!.user!.name!
+    );
+
     return (
       <div className="flex flex-col min-h-screen justify-between">
         <Header />
@@ -29,11 +41,16 @@ export default async function EventPage({ params }: EventPageProps) {
               </p>
             ))}
           </div>
+
+          {envelope.kind === "first_choice" && (
+            <FirstChoice envelope={envelope} />
+          )}
         </main>
       </div>
     );
   } catch (error: unknown) {
     console.log(error);
+
     return (
       <div className="flex flex-col min-h-screen justify-between">
         <Header />

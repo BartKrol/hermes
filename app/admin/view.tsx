@@ -1,6 +1,6 @@
 "use client";
 
-import { getActiveEdgeData, setActiveEdge } from "@/actions/edgesAction";
+import { getActiveEdgesData, setActiveEdge } from "@/actions/edgesAction";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
@@ -22,7 +22,7 @@ export default function AdminView({
             checked={node.active === 1}
             onCheckedChange={async (checked) => {
               await setActiveEdge(node.name, checked ? 1 : 0);
-              const newActiveEdges = await getActiveEdgeData();
+              const newActiveEdges = await getActiveEdgesData();
               setActiveEdges(newActiveEdges);
             }}
           />

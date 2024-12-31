@@ -5,7 +5,7 @@ import { drizzle } from "drizzle-orm/libsql";
 import { createClient } from "@libsql/client";
 
 const client = createClient({
-  url: process.env.DB_FILE_NAME!,
+  url: process.env.DATABASE_URL!,
 });
 
 export const db = drizzle(client);

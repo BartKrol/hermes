@@ -9,6 +9,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         name: {},
       },
       authorize: async (credentials) => {
+        console.log(credentials, "here");
         if (!credentials.name || typeof credentials.name !== "string") {
           throw new Error("Invalid credentials");
         }
@@ -19,7 +20,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           throw new Error("Invalid credentials");
         }
 
-        return { id: credentials.name as string };
+        return {
+          id: credentials.name as string,
+          name: credentials.name as string,
+        };
       },
     }),
   ],
