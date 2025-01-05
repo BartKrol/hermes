@@ -11,3 +11,8 @@ export const activeEdgesTable = sqliteTable("active_edges", {
 //   title: text().notNull(),
 //   body: text().notNull(),
 // });
+export const documentsTable = sqliteTable("documents", {
+  id: text("id").primaryKey(),
+  title: text("title").notNull(),
+  content: text("content").notNull(),
+});

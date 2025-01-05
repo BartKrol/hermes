@@ -29,7 +29,7 @@ export default function EventSwitcher({
       <div className="flex items-center gap-2">
         <Switch checked={checked} onCheckedChange={handleCheckedChange} />
         <Label className="text-lg">
-          {!checked ? "Przeszsosc" : "Alternatywna Przeszlosc"}
+          {!checked ? "Przeszłość" : "Alternatywna Przeszlosc"}
         </Label>
       </div>
       {checked && (

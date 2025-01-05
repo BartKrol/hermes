@@ -30,15 +30,22 @@ COPY . .
 # Build application
 RUN npm run build
 
+RUN rm .env
+
 # Remove development dependencies
 RUN npm prune --omit=dev
-
 
 # Final stage for app image
 FROM base
 
+# For build
+ENV DATABASE_URL=file:./local.db
+
 # Copy built application
 COPY --from=build /app /app
+
+#TODO: FIX
+RUN touch /app/local.db
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000

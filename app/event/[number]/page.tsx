@@ -5,6 +5,7 @@ import { checkAuthentication } from "@/lib/permissions";
 import { cn } from "@/lib/utils";
 import { FirstChoice } from "./FirstChoice";
 
+export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
 export type EventPageProps = {

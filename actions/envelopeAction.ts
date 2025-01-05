@@ -1,6 +1,6 @@
 "use server";
 import envelopesData from "@/envelopes.json";
-import { getDoc, getIdFromUrl } from "@/lib/docs";
+import { getDoc, getIdFromUrl, revalidateAllDocuments } from "@/lib/docs";
 
 import { Envelope } from "@/lib/envelopes";
 
@@ -30,4 +30,8 @@ export async function getEnvelopeData(number: string, character: string) {
   const doc = await getDoc(docId);
 
   return { doc, envelope };
+}
+
+export async function revalidateEnvelopeData() {
+  await revalidateAllDocuments();
 }

@@ -1,3 +1,5 @@
+"use server";
+
 import { db } from "@/db/drizzle";
 import { activeEdgesTable } from "@/db/schema";
 import { getEdgeName } from "@/lib/edges";

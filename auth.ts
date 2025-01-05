@@ -3,13 +3,13 @@ import Credentials from "next-auth/providers/credentials";
 import characters from "@/characters.json";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  trustHost: true,
   providers: [
     Credentials({
       credentials: {
         name: {},
       },
       authorize: async (credentials) => {
-        console.log(credentials, "here");
         if (!credentials.name || typeof credentials.name !== "string") {
           throw new Error("Invalid credentials");
         }
