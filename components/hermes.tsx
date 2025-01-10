@@ -54,7 +54,7 @@ function Hermes({ activeNodes: baseActiveNodes, endTime }: HermesProps) {
       <svg
         className="h-screen w-auto"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 160 2218.249 1800"
+        viewBox="0 0 2218.249 2190.175"
       >
         <defs>
           <clipPath id="YpiqB3JcT1SUkYklMKY8J">

@@ -52,10 +52,10 @@ export function getSymbolListForCharacter(name: Character) {
 
   const characterList = characters[name].symbols;
 
-  list.splice(1, 0, characterList[0]);
-  list.splice(3, 0, characterList[1]);
-  list.splice(6, 0, characterList[2]);
-  list.splice(9, 0, characterList[3]);
+  list.splice(1, 0, characterList[3]);
+  list.splice(3, 0, characterList[2]);
+  list.splice(6, 0, characterList[1]);
+  list.splice(9, 0, characterList[0]);
 
   return list;
 }

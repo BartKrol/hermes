@@ -34,7 +34,7 @@
   },
   "whitman": {
     "node": "node_4",
-    "name": "Samuel Whitman",
+    "name": "Samantha Whitman",
     "symbol": "ꇐ",
     "symbols": [
       { "number": 83, "symbol": "ቾ" },
@@ -78,7 +78,7 @@
   },
   "kline": {
     "node": "node_8",
-    "name": "Noah Kline",
+    "name": "Naomi Kline",
     "symbol": "ꂊ",
     "symbols": [
       { "number": 82, "symbol": "ፄ" },
@@ -94,7 +94,7 @@
     "symbols": [
       { "number": 85, "symbol": "ጧ" },
       { "number": 99, "symbol": "ፄ" },
-      { "number": 11, "symbol": "፴" },
+      { "number": 10, "symbol": "፴" },
       { "number": 92, "symbol": "ሙ" }
     ]
   },

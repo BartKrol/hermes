@@ -18,17 +18,22 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col min-h-screen justify-between">
-      <Header />
+      <Header name={characterData.name} />
       <main className="flex flex-col container mx-auto px-4 flex-grow gap-8">
-        <div className="py-4 px-2">
-          <h2 className="text-2xl font-semibold mb-4">Przybornk Badawczy</h2>
+        <div className="flex flex-col gap-6 pt-2">
+          <h2 className="text-2xl font-semibold">Przybornk Badawczy</h2>
+          <ResearchInput />
         </div>
-        <ResearchInput />
         <div>
           <h2 className="text-2xl font-semibold mb-4">Symbol Badawczy</h2>
           <Card className="m-4">
             <CardContent className="flex justify-center items-center">
-              <span className="text-9xl pt-4">{characterData.symbol}</span>
+              <span
+                className="text-9xl pt-4"
+                style={{ font: "Nunito, Segoe UI Emoji" }}
+              >
+                {characterData.symbol}
+              </span>
             </CardContent>
           </Card>
         </div>
@@ -37,7 +42,12 @@ export default async function Home() {
           {symbols.map((data) => (
             <Card className="m-4" key={data.symbol}>
               <CardContent className="flex flex-row justify-between items-center">
-                <span className="text-9xl pt-8">{data.symbol}</span>
+                <span
+                  className="text-9xl pt-8"
+                  style={{ font: "Nunito, Segoe UI Emoji" }}
+                >
+                  {data.symbol}
+                </span>
                 {/* TODO */}
                 <Separator className="h-full" orientation="vertical" />
                 <span className="text-7xl pt-8">{data.number}</span>

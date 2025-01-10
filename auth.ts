@@ -11,12 +11,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
       authorize: async (credentials) => {
         if (!credentials.name || typeof credentials.name !== "string") {
+          console.log("HERE1");
           throw new Error("Invalid credentials");
         }
 
         const character =
           characters[credentials.name as keyof typeof characters];
         if (!character) {
+          console.log("HERE2");
           throw new Error("Invalid credentials");
         }
 

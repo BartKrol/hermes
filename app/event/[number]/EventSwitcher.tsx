@@ -28,14 +28,16 @@ export default function EventSwitcher({
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <Switch checked={checked} onCheckedChange={handleCheckedChange} />
-        <Label className="text-lg">
+        <Label className="text-lg prose prose-invert">
           {!checked ? "Przeszłość" : "Alternatywna Przeszlosc"}
         </Label>
       </div>
       {checked && (
         <div>
-          <span className="text-lg">Twoja przeszlosc pod numerem </span>
-          <span className="text-lg font-bold">
+          <span className="text-lg prose prose-invert">
+            Twoja przeszłość pod numerem{" "}
+          </span>
+          <span className="text-lg font-bold underline">
             <Link href={`/event/${event}`}>{event}</Link>
           </span>
         </div>
