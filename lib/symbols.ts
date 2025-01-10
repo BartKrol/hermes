@@ -59,3 +59,34 @@ export function getSymbolListForCharacter(name: Character) {
 
   return list;
 }
+
+export const trainingSymbols = [
+  {
+    symbol: "α",
+    number: 18,
+  },
+  {
+    symbol: "θ",
+    number: 93,
+  },
+  {
+    symbol: "β",
+    number: 26,
+  },
+  {
+    symbol: "λ",
+    number: 84,
+  },
+  {
+    symbol: "μ",
+    number: 27,
+  },
+  {
+    symbol: "Δ",
+    number: 35,
+  },
+  {
+    symbol: "Ω",
+    number: 58,
+  },
+];

@@ -29,7 +29,7 @@ export default function Login({ onSignIn }: LoginProps) {
     <form action={trySigningIn} className="flex flex-row gap-4">
       <Input id="name" name="name" placeholder="Nazwisko" />
       <Button type="submit" disabled={isLoading}>
-        {!isLoading ? <LoadingSpinner /> : "Zaloguj"}
+        {isLoading ? <LoadingSpinner /> : "Zaloguj"}
       </Button>
     </form>
   );

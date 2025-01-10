@@ -262,5 +262,13 @@
       "reyes": "https://docs.google.com/document/d/1bV_e_vQmaW30CB4rUkUD991MAbhGaUn0dTwpojyav_0/edit"
     },
     "kind": "second_alternative"
+  },
+  "168": {
+    "doc": "https://docs.google.com/document/d/1zUx4kh-xt_u30JcuK2ddMb52iNYlnBvIXbbz6PEWN2o/edit",
+    "kind": "training"
+  },
+  "116": {
+    "doc": "https://docs.google.com/document/d/1zUx4kh-xt_u30JcuK2ddMb52iNYlnBvIXbbz6PEWN2o/edit",
+    "kind": "training"
   }
 }

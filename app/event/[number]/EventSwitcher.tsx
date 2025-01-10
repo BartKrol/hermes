@@ -1,10 +1,10 @@
 "use client";
 
-import { setActiveEdge } from "@/actions/edgesAction";
+import { getActiveEdgeData, setActiveEdge } from "@/actions/edgesAction";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@radix-ui/react-label";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export type EventSwitcherProps = {
   node: string;
@@ -23,6 +23,10 @@ export default function EventSwitcher({
     await setActiveEdge(node, active ? 1 : 0);
     setChecked(active);
   };
+
+  useEffect(() => {
+    getActiveEdgeData(node).then((data) => setChecked(!!data.active));
+  }, [node, setChecked]);
 
   return (
     <div className="flex flex-col gap-2">

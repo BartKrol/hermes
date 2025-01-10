@@ -12,6 +12,10 @@ export type Envelope =
   | {
       kind: "second_alternative";
       docs: Record<string, string>;
+    }
+  | {
+      kind: "training";
+      doc: string;
     };
 
 export type FirstChoiceEnvelopeData = {

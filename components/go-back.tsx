@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 export default function GoBack() {
   const router = useRouter();
-  const handleBack = () => {
+  const handleBack = async () => {
     router.back();
   };
 

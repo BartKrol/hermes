@@ -6,7 +6,11 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { LoadingSpinner } from "./loader";
 
-export function ResearchInput() {
+export type ResearchInputProps = {
+  training?: boolean;
+};
+
+export function ResearchInput({ training = false }: ResearchInputProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -14,7 +18,7 @@ export function ResearchInput() {
 
   const handleSearch = () =>
     startTransition(() => {
-      router.push(`/event/${number}`);
+      router.push(training ? `training/${number}` : `/event/${number}`);
     });
 
   return (
