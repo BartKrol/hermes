@@ -7,7 +7,6 @@ import { z } from "zod";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import {
   Form,
   FormControl,
@@ -57,24 +56,20 @@ export function DateTimePicker({
     toast.success(`Selected date and time: ${format(data.time, "PPPP HH:mm")}`);
   };
 
-  const handleDateSelect = (date: Date | undefined) => {
-    if (date) {
-      form.setValue("time", date);
-    }
-  };
-
   const handleTimeChange = (type: "hour" | "minute", value: string) => {
     const currentDate = form.getValues("time") || new Date();
-    const newDate = new Date(currentDate);
+    const today = new Date();
+
+    currentDate.setDate(today.getDate());
 
     if (type === "hour") {
       const hour = parseInt(value, 10);
-      newDate.setHours(hour);
+      currentDate.setHours(hour);
     } else if (type === "minute") {
-      newDate.setMinutes(parseInt(value, 10));
+      currentDate.setMinutes(parseInt(value, 10));
     }
 
-    form.setValue("time", newDate);
+    form.setValue("time", currentDate);
   };
 
   return (
@@ -107,12 +102,6 @@ export function DateTimePicker({
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
                   <div className="sm:flex">
-                    <Calendar
-                      mode="single"
-                      selected={field.value}
-                      onSelect={handleDateSelect}
-                      initialFocus
-                    />
                     <div className="flex flex-col sm:flex-row sm:h-[300px] divide-y sm:divide-y-0 sm:divide-x">
                       <ScrollArea className="w-64 sm:w-auto">
                         <div className="flex sm:flex-col p-2">

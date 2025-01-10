@@ -2,11 +2,10 @@
 
 import { getActiveEdgesData, setActiveEdge } from "@/actions/edgesAction";
 import { revalidateEnvelopeData } from "@/actions/envelopeAction";
-import { setHermesSize, setTime } from "@/actions/settingsAction";
+import { setTime } from "@/actions/settingsAction";
 import { DateTimePicker } from "@/components/date-time-picker";
 import { LoadingSpinner } from "@/components/loader";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Settings } from "@/lib/settings";
@@ -27,12 +26,6 @@ export default function AdminView({
 
   const handleSetTime = async (date: Date) => {
     const result = await setTime(date);
-    setSettings(result);
-  };
-
-  const handleSetHermesSize = async (data: FormData) => {
-    const size = parseInt(data.get("hermes_size") as string, 10);
-    const result = await setHermesSize(size);
     setSettings(result);
   };
 
@@ -67,18 +60,6 @@ export default function AdminView({
         </Button>
         {isRevalidating && <LoadingSpinner />}
       </div>
-      <form
-        className="flex flex-row gap-3 items-center"
-        action={handleSetHermesSize}
-      >
-        <Label htmlFor="hermes_size">Hermes Size</Label>
-        <Input
-          name="hermes_size"
-          type="number"
-          defaultValue={settings.hermes_size ?? 1000}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
       <div className="flex flex-row gap-3 items-center">
         <DateTimePicker
           onSubmit={handleSetTime}

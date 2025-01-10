@@ -23,15 +23,3 @@ export async function setTime(date: Date) {
 
   return await getSettings();
 }
-
-export async function setHermesSize(size: number) {
-  await db
-    .insert(settingsTable)
-    .values({ key: Settings.HermesSize, value: size.toString() })
-    .onConflictDoUpdate({
-      target: settingsTable.key,
-      set: { value: size.toString() },
-    });
-
-  return await getSettings();
-}

@@ -52,10 +52,9 @@ function Hermes({ activeNodes: baseActiveNodes, endTime }: HermesProps) {
       style={{ backgroundColor: "#0f0f0f" }}
     >
       <svg
+        className="h-screen w-auto"
         xmlns="http://www.w3.org/2000/svg"
-        width={1000}
-        height={1000}
-        viewBox="0 0 2218.249 2190.175"
+        viewBox="0 160 2218.249 1800"
       >
         <defs>
           <clipPath id="YpiqB3JcT1SUkYklMKY8J">
