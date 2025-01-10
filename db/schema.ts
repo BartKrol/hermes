@@ -6,13 +6,13 @@ export const activeEdgesTable = sqliteTable("active_edges", {
   active: int().notNull(),
 });
 
-// export const envelopeTable = sqliteTable("envelopes", {
-//   id: text().primaryKey(),
-//   title: text().notNull(),
-//   body: text().notNull(),
-// });
 export const documentsTable = sqliteTable("documents", {
   id: text("id").primaryKey(),
   title: text("title").notNull(),
   content: text("content").notNull(),
+});
+
+export const settingsTable = sqliteTable("settings", {
+  key: text("key").primaryKey(),
+  value: text("value").notNull(),
 });

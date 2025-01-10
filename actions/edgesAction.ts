@@ -10,6 +10,11 @@ export const getActiveEdges = async () => {
   return new Set(data.map((edge) => getEdgeName(edge.name, edge.active)));
 };
 
+export const getActiveNodes = async () => {
+  const data = await db.select().from(activeEdgesTable);
+  return new Set(data.filter((edge) => edge.active).map((edge) => edge.name));
+};
+
 export const getActiveEdgeData = async (name: string) => {
   const data = await db
     .select()
