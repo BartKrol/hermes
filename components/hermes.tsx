@@ -1562,7 +1562,7 @@ function Hermes({
             }}
             transform="translate(1030.045 1049.655)"
           >
-            {`${time.hours}:${time.minutes}`}
+            {`${time.minutes}:${time.seconds}`}
           </text>
         </g>
       </svg>

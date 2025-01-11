@@ -6,7 +6,6 @@ type TimerProps = {
 
 export default function useTimer({ targetDate }: TimerProps) {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 0,
     minutes: 0,
     seconds: 0,
   });
@@ -18,17 +17,18 @@ export default function useTimer({ targetDate }: TimerProps) {
     const difference = target.getTime() - now.getTime();
 
     if (difference <= 0) {
-      setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+      setTimeLeft({ minutes: 0, seconds: 0 });
       return;
     }
 
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    // Convert difference to minutes and seconds
+    const totalMinutes = Math.floor(difference / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    setTimeLeft({ hours, minutes, seconds });
+    setTimeLeft({
+      minutes: totalMinutes,
+      seconds,
+    });
   }, [targetDate]);
 
   useEffect(() => {
@@ -41,7 +41,6 @@ export default function useTimer({ targetDate }: TimerProps) {
   }, [targetDate, calculateTimeLeft]);
 
   return {
-    hours: timeLeft.hours < 10 ? `0${timeLeft.hours}` : `${timeLeft.hours}`,
     minutes:
       timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : `${timeLeft.minutes}`,
     seconds:
