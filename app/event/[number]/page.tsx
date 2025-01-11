@@ -30,9 +30,9 @@ export default async function EventPage({ params }: EventPageProps) {
     );
 
     return (
-      <div className="flex flex-col min-h-screen justify-between">
+      <div className="flex flex-col min-h-screen justify-between h-full">
         <Header name={characterFullName} />
-        <main className="flex flex-col container mx-auto px-4 flex-grow gap-8 pb-8">
+        <main className="flex flex-col container mx-auto px-4 flex-grow gap-8 pb-8 h-full flex-1">
           <article className="prose prose-invert">
             {doc.body
               .filter((p) => !!p.text.trim())
@@ -48,8 +48,10 @@ export default async function EventPage({ params }: EventPageProps) {
           {envelope.kind === "first_choice" && (
             <FirstChoice envelope={envelope} />
           )}
-          <GoBack />
         </main>
+        <footer className="flex flex-row items-center justify-end pt-2 pb-4">
+          <GoBack />
+        </footer>
       </div>
     );
   } catch (error: unknown) {
