@@ -4,38 +4,36 @@ import {
   saveDocument,
   updateDocument,
 } from "@/db/documents";
+
 import "dotenv/config";
 
-import { google } from "googleapis";
+import * as contentful from "contentful";
 
-export type GoogleDocContent = {
-  title: string;
-  body: {
-    text: string;
-    bold: boolean;
-  }[];
-};
+import type { Document } from "@contentful/rich-text-types";
+import config from "@/config";
 
-const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(
-    Buffer.from(
-      process.env.GOOGLE_APPLICATION_CREDENTIALS_BASE64 || "",
-      "base64"
-    ).toString("utf8")
-  ),
-  scopes: ["https://www.googleapis.com/auth/documents.readonly"],
+export const client = contentful.createClient({
+  space: config.CONTENTFUL_SPACE_ID,
+  accessToken: config.CONTENTFUL_ACCESS_TOKEN,
 });
 
-const docs = google.docs({ version: "v1", auth });
+export type DocData = {
+  title: string;
+  body: Document;
+};
 
-export async function cacheDoc(docId: string, docData: GoogleDocContent) {
-  const existingDoc = await getDocument(docId);
-
-  if (existingDoc) {
-    return existingDoc;
-  }
+export async function cacheDoc(docId: string, docData: DocData) {
   saveDocument(docId, docData);
   return docData;
+}
+
+export async function getContent(docId: string): Promise<DocData> {
+  const document = await client.getEntry(docId);
+
+  return {
+    title: document.fields["title"] as string,
+    body: document.fields["text"] as Document,
+  };
 }
 
 export async function getDoc(docId: string) {
@@ -50,34 +48,14 @@ export async function getDoc(docId: string) {
       return {
         title: cachedDoc.title,
         body: JSON.parse(cachedDoc.content),
-      } as GoogleDocContent;
+      } as DocData;
     }
 
-    // Fetch the document if not cached
-    const document = await docs.documents.get({ documentId: docId });
+    const docData = await getContent(docId);
 
-    const title = document.data.title || "Untitled Document";
-    const content = document.data.body?.content || [];
-
-    // Extract text content with styles
-    const body = content.flatMap((element) => {
-      if (!element.paragraph) return [];
-      return (
-        element.paragraph.elements?.map((e) => {
-          const text = e.textRun?.content || "";
-          const isBold = e.textRun?.textStyle?.bold || false;
-
-          return isBold ? { text, bold: true } : { text, bold: false };
-        }) || []
-      );
-    });
-
-    const docData = { title, body };
-
-    // Cache the document in the database
     await cacheDoc(docId, docData);
 
-    return docData as GoogleDocContent;
+    return docData;
   } catch (error) {
     throw new Error(error instanceof Error ? error.message : "Unknown error");
   }
@@ -89,29 +67,9 @@ export async function revalidateAllDocuments() {
 
     for (const cachedDoc of cachedDocs) {
       try {
-        // Fetch the updated document
-        const document = await docs.documents.get({ documentId: cachedDoc.id });
+        const docData = await getContent(cachedDoc.id);
 
-        const title = document.data.title || "Untitled Document";
-        const content = document.data.body?.content || [];
-
-        // Extract text content with styles
-        const body = content.flatMap((element) => {
-          if (!element.paragraph) return [];
-          return (
-            element.paragraph.elements?.map((e) => {
-              const text = e.textRun?.content || "";
-              const isBold = e.textRun?.textStyle?.bold || false;
-
-              return isBold ? { text, bold: true } : { text, bold: false };
-            }) || []
-          );
-        });
-
-        const updatedData = { title, body };
-
-        // Update the document in the cache
-        updateDocument(cachedDoc.id, updatedData);
+        updateDocument(cachedDoc.id, docData);
 
         console.log(`Revalidated document with ID: ${cachedDoc.id}`);
       } catch (error) {
@@ -124,8 +82,4 @@ export async function revalidateAllDocuments() {
   } catch (error) {
     console.error("Failed to revalidate documents", error);
   }
-}
-
-export function getIdFromUrl(url: string) {
-  return url.match(/[-\w]{25,}/)?.[0];
 }

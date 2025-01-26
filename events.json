@@ -1,0 +1,274 @@
+{
+  "29": {
+    "doc": "4c7IlOp4l42gnepYOACtSf",
+    "kind": "first_choice",
+    "node": "node_10",
+    "events": {
+      "mercer": 795,
+      "daley": 872
+    }
+  },
+  "42": {
+    "doc": "46Ca8jbk42CMgSGL8mWBoX",
+    "kind": "first_choice",
+    "node": "node_11",
+    "events": {
+      "daley": 861,
+      "lawson": 212
+    }
+  },
+  "47": {
+    "doc": "4pmkdaDj45JJVVEeWqYT6R",
+    "kind": "first_choice",
+    "node": "node_6",
+    "events": {
+      "ortega": 531,
+      "reyes": 608
+    }
+  },
+  "92": {
+    "doc": "7naax1sTrFIK7pwfRiTU9A",
+    "kind": "first_choice",
+    "node": "node_5",
+    "events": {
+      "callahan": 465,
+      "ortega": 542
+    }
+  },
+  "126": {
+    "doc": "3TQFHksxwdwLx6D0gx1Sje",
+    "kind": "first_choice",
+    "node": "node_7",
+    "events": {
+      "reyes": 597,
+      "kline": 674
+    }
+  },
+  "134": {
+    "doc": "29d88hY7NrbiQWeXQ8TjnF",
+    "kind": "first_choice",
+    "node": "node_2",
+    "events": {
+      "hayes": 267,
+      "kane": 344
+    }
+  },
+  "141": {
+    "doc": "70dtWcegbxWdqgALQ8XcZ6",
+    "kind": "first_choice",
+    "node": "node_1",
+    "events": {
+      "lawson": 201,
+      "hayes": 278
+    }
+  },
+  "153": {
+    "doc": "DCbOeQPIMhci5QE5VTNCq",
+    "kind": "first_choice",
+    "node": "node_3",
+    "events": {
+      "kane": 333,
+      "whitman": 410
+    }
+  },
+  "172": {
+    "doc": "1WJKOrtGBLmUBBp9xVW9L0",
+    "kind": "first_choice",
+    "node": "node_4",
+    "events": {
+      "whitman": 399,
+      "callahan": 476
+    }
+  },
+  "176": {
+    "doc": "2A4Aaq3heWO4DIx3aNIoFx",
+    "kind": "first_choice",
+    "node": "node_9",
+    "events": {
+      "marlowe": 729,
+      "mercer": 806
+    }
+  },
+  "181": {
+    "doc": "51AEQNpsr6CMufL1itxi2C",
+    "kind": "first_choice",
+    "node": "node_8",
+    "events": {
+      "kline": 663,
+      "marlowe": 740
+    }
+  },
+  "201": {
+    "doc": "69GbGV5FFl4Uk0w0quPVsV",
+    "kind": "first_alternative"
+  },
+  "212": {
+    "doc": "3fJtFVxLSODCafq3zCyT2s",
+    "kind": "first_alternative"
+  },
+  "267": {
+    "doc": "1uyadKaqbSQ5jBbcMOm4Jm",
+    "kind": "first_alternative"
+  },
+  "278": {
+    "doc": "7DkjliZe6aSZlmnoJJSOMl",
+    "kind": "first_alternative"
+  },
+  "333": {
+    "doc": "7c74JtVb2UDL8YxasGiL3t",
+    "kind": "first_alternative"
+  },
+  "344": {
+    "doc": "EhE8BhoMPnI1VsuBwTIhU",
+    "kind": "first_alternative"
+  },
+  "399": {
+    "doc": "TPP3ma7ABkPSQiRnPls31",
+    "kind": "first_alternative"
+  },
+  "410": {
+    "doc": "2RVU5uAYmcfA9iRi4vMljO",
+    "kind": "first_alternative"
+  },
+  "465": {
+    "doc": "3asamdfXbiZl6TywCEfW8i",
+    "kind": "first_alternative"
+  },
+  "476": {
+    "doc": "5v5mOIQKr6vf1iJIjUXxN9",
+    "kind": "first_alternative"
+  },
+  "531": {
+    "doc": "5CUoVW6OuAcfwdUV25bIed",
+    "kind": "first_alternative"
+  },
+  "542": {
+    "doc": "4a88AyZq3MDlkgdX0MB6lZ",
+    "kind": "first_alternative"
+  },
+  "597": {
+    "doc": "1l0JfjaRYAPllA7b54IGZt",
+    "kind": "first_alternative"
+  },
+  "608": {
+    "doc": "xKEQESgIcZrVVHA89A9Hv",
+    "kind": "first_alternative"
+  },
+  "663": {
+    "doc": "3ggiruhJpAKF1wLMio1dd",
+    "kind": "first_alternative"
+  },
+  "674": {
+    "doc": "1FqI2E4I9HmKjBNwmo6EYs",
+    "kind": "first_alternative"
+  },
+  "729": {
+    "doc": "6cFvl5U4EUE7rKdAvO5R7p",
+    "kind": "first_alternative"
+  },
+  "740": {
+    "doc": "5GQyXo56Ge6U046MyinyKl",
+    "kind": "first_alternative"
+  },
+  "795": {
+    "doc": "1TUZg8oQh9eclOUIvCZXkt",
+    "kind": "first_alternative"
+  },
+  "806": {
+    "doc": "7IEYaceX1DoyeHjy1zy9ru",
+    "kind": "first_alternative"
+  },
+  "861": {
+    "doc": "5BdGn4kDY3zWgCv1vY6Dd9",
+    "kind": "first_alternative"
+  },
+  "872": {
+    "doc": "1hMR2eKjBXeWpYijKZv6gk",
+    "kind": "first_alternative"
+  },
+  "25": {
+    "docs": {
+      "whitman": "5bMKieMTjxmi62yw5H4vUN",
+      "ortega": "3GglYYZZOvHSU2VGHoWsoC"
+    },
+    "kind": "second_alternative"
+  },
+  "28": {
+    "docs": {
+      "marlowe": "7AjZynIKwYPvlgEeHaj5Op",
+      "daley": "5QfUZX3cMJJglNrFQHuk4j"
+    },
+    "kind": "second_alternative"
+  },
+  "40": {
+    "docs": {
+      "lawson": "1rYlfh6EUPZhYBCxNSKjqO",
+      "kane": "7nqDXAoCVpQw4rxf9e2wY5"
+    },
+    "kind": "second_alternative"
+  },
+  "41": {
+    "docs": {
+      "daley": "4kNo6qEM7qmw7qtBQNIIts",
+      "hayes": "33PPqv1m5mXkku38dD1KEs"
+    },
+    "kind": "second_alternative"
+  },
+  "61": {
+    "docs": {
+      "kane": "7tIMkZ2DS5KRtJjqO9RnEf",
+      "callahan": "7fTofyYMzy5A8z23Ue3VSt"
+    },
+    "kind": "second_alternative"
+  },
+  "62": {
+    "docs": {
+      "kline": "2BuWfc1bWCITbhTGlRLWh0",
+      "mercer": "2lMcSxb6AfbxoWgoGGG7MV"
+    },
+    "kind": "second_alternative"
+  },
+  "74": {
+    "docs": {
+      "ortega": "3XItBZIRxoYc29yyyGgR5o",
+      "kline": "5RkXRHgdMpiIroPRqUvbmh"
+    },
+    "kind": "second_alternative"
+  },
+  "130": {
+    "docs": {
+      "mercer": "6DtoTrSnOR451IFcjou2WC",
+      "lawson": "24galUaWDRMID1ieTwcHr4"
+    },
+    "kind": "second_alternative"
+  },
+  "159": {
+    "docs": {
+      "hayes": "10fW4nFvgvi6Luw5IObLy3",
+      "whitman": "1B2uSEbaBCPoSRifiDJvmK"
+    },
+    "kind": "second_alternative"
+  },
+  "169": {
+    "docs": {
+      "reyes": "2MnZS6KJj9RSGg59iI2Duo",
+      "marlowe": "3as2HAO9hDJLi0cl2sf2Bw"
+    },
+    "kind": "second_alternative"
+  },
+  "192": {
+    "docs": {
+      "callahan": "2Ayiftc15HzbGkxRnYyOJN",
+      "reyes": "VqCqsluqR7ASnZpyAt68t"
+    },
+    "kind": "second_alternative"
+  },
+  "168": {
+    "doc": "2SMeni7ucLEXLi7YJfyIDZ",
+    "kind": "training"
+  },
+  "116": {
+    "doc": "2SMeni7ucLEXLi7YJfyIDZ",
+    "kind": "training"
+  }
+}

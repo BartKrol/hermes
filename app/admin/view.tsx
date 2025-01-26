@@ -8,7 +8,7 @@ import { LoadingSpinner } from "@/components/loader";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { nodeToCharacters } from "@/lib/envelopes";
+import { nodeToCharacters } from "@/lib/events";
 import { Settings } from "@/lib/settings";
 import { useState } from "react";
 

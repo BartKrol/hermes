@@ -19,7 +19,7 @@ async function main() {
   for (const node of nodes) {
     const nodeData: typeof activeEdgesTable.$inferInsert = {
       name: node,
-      active: 1,
+      active: 0,
     };
     await db.insert(activeEdgesTable).values(nodeData);
   }

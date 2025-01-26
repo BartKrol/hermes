@@ -5,12 +5,14 @@ import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { LoadingSpinner } from "./loader";
+import { useTranslations } from "next-intl";
 
 export type ResearchInputProps = {
   training?: boolean;
 };
 
 export function ResearchInput({ training = false }: ResearchInputProps) {
+  const t = useTranslations("Home");
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -24,13 +26,13 @@ export function ResearchInput({ training = false }: ResearchInputProps) {
   return (
     <div className="flex flex-row justify-between gap-2">
       <Input
-        placeholder="Liczba"
+        placeholder={t("number")}
         type="number"
         value={number}
         onChange={(e) => setNumber(e.target.value)}
       />
       <Button onClick={handleSearch} disabled={!number || isPending}>
-        {isPending ? <LoadingSpinner /> : "Zbadaj"}
+        {isPending ? <LoadingSpinner /> : t("research")}
       </Button>
     </div>
   );

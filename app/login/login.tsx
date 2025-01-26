@@ -3,6 +3,8 @@
 import { LoadingSpinner } from "@/components/loader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -11,6 +13,8 @@ export type LoginProps = {
 };
 
 export default function Login({ onSignIn }: LoginProps) {
+  const t = useTranslations("Login");
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const trySigningIn = async (data: FormData) => {
     setIsLoading(true);
@@ -19,6 +23,7 @@ export default function Login({ onSignIn }: LoginProps) {
       if (error) {
         toast.error(error.message);
       }
+      router.push("/");
     } catch (e) {
       console.log(e);
       toast.error("Error!");
@@ -27,9 +32,9 @@ export default function Login({ onSignIn }: LoginProps) {
   };
   return (
     <form action={trySigningIn} className="flex flex-row gap-4">
-      <Input id="name" name="name" placeholder="Nazwisko" />
+      <Input id="name" name="name" placeholder={t("last_name")} />
       <Button type="submit" disabled={isLoading}>
-        {isLoading ? <LoadingSpinner /> : "Zaloguj"}
+        {isLoading ? <LoadingSpinner /> : t("login")}
       </Button>
     </form>
   );

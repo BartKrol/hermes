@@ -1,4 +1,5 @@
 "use client";
+
 import { getActiveNodes } from "@/actions/edgesAction";
 import { getSettings } from "@/actions/settingsAction";
 import useTimer from "@/hooks/useTimer";
@@ -597,7 +598,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#e03131"
                 stroke="#1971c2"
                 strokeWidth={4}
                 d="M1082.724 565.994h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -630,7 +630,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#2f9e44"
                 stroke="#f08c00"
                 strokeWidth={4}
                 d="M1340.196 635.923h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -663,7 +662,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#1971c2"
                 stroke="#c2255c"
                 strokeWidth={4}
                 d="M1512.817 859.548h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1272,7 +1270,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#f08c00"
                 stroke="#099268"
                 strokeWidth={4}
                 d="M1514.048 1213.44h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1306,7 +1303,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#c2255c"
                 stroke="#9c36b5"
                 strokeWidth={4}
                 d="M1380.196 1435.923h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1340,7 +1336,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#099268"
                 stroke="#846358"
                 strokeWidth={4}
                 d="M1108.524 1541.63h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1374,7 +1369,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#9c36b5"
                 stroke="#e8590c"
                 strokeWidth={4}
                 d="M797.742 1479.663h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1407,7 +1401,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#846358"
                 stroke="#6741d9"
                 strokeWidth={4}
                 d="M612.07 1277.004h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1440,7 +1433,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#e8590c"
                 stroke="#0c8599"
                 strokeWidth={4}
                 d="M560.196 995.923h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1473,7 +1465,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#6741d9"
                 stroke="#e03131"
                 strokeWidth={4}
                 d="M651.459 752.458h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"
@@ -1507,7 +1498,6 @@ function Hermes({
               />
               <path
                 fill="none"
-                // stroke="#0c8599"
                 stroke="#2f9e44"
                 strokeWidth={4}
                 d="M820.196 600.602h54.59m-54.59 0h54.59m0 0v52.33m0-52.33v52.33m0 0h-54.59m54.59 0h-54.59m0 0v-52.33m0 52.33v-52.33"

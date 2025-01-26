@@ -1,11 +1,13 @@
 import { signOutAction } from "@/actions/authAction";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
-    <footer className="flex flex-row items-center justify-end pt-2 pb-4 border-t border-gray-200">
+    <footer className="container mx-auto flex flex-row items-center justify-end py-4 border-t border-gray-200 px-4">
       <form action={signOutAction}>
         <button type="submit" className="text-sm">
-          Wyloguj
+          {t("logout")}
         </button>
       </form>
     </footer>

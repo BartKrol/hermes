@@ -1,15 +1,16 @@
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 import { ResearchInput } from "@/components/research-input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { checkAuthentication } from "@/lib/permissions";
 import { getSymbolListForCharacter } from "@/lib/symbols";
 import { getCharacterName } from "@/lib/character";
 import characters from "@/characters.json";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
+import { getTranslations } from "next-intl/server";
 
 export default async function Home() {
   await checkAuthentication();
+  const t = await getTranslations("Home");
 
   const character = await getCharacterName();
 
@@ -21,11 +22,13 @@ export default async function Home() {
       <Header name={characterData.name} />
       <main className="flex flex-col container mx-auto px-4 flex-grow gap-8 max-w-screen-sm">
         <div className="flex flex-col gap-6 pt-2">
-          <h2 className="text-2xl font-semibold">Przybornk Badawczy</h2>
+          <h2 className="text-2xl font-semibold">{t("research_toolbox")}</h2>
           <ResearchInput />
         </div>
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Symbol Badawczy</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            {t("research_symbol")}
+          </h2>
           <Card className="m-4">
             <CardContent className="flex justify-center items-center">
               <span
@@ -38,7 +41,7 @@ export default async function Home() {
           </Card>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Baza Wiedzy</h2>
+          <h2 className="text-2xl font-semibold mb-4">{t("knowledge_base")}</h2>
           {symbols.map((data) => (
             <Card className="m-4" key={data.symbol}>
               <CardContent className="flex flex-row justify-between items-center">
@@ -48,15 +51,13 @@ export default async function Home() {
                 >
                   {data.symbol}
                 </span>
-                {/* TODO */}
-                <Separator className="h-full" orientation="vertical" />
                 <span className="text-7xl pt-8">{data.number}</span>
               </CardContent>
             </Card>
           ))}
         </div>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

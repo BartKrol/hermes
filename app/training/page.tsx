@@ -1,8 +1,7 @@
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 import { ResearchInput } from "@/components/research-input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 import { trainingSymbols } from "@/lib/symbols";
 
 export default async function Training() {
@@ -25,8 +24,6 @@ export default async function Training() {
                 >
                   {data.symbol}
                 </span>
-                {/* TODO */}
-                <Separator className="h-full" orientation="vertical" />
                 <span className="text-7xl pt-8">{data.number}</span>
               </CardContent>
             </Card>

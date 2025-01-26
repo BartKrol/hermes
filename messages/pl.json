@@ -1,0 +1,33 @@
+{
+  "Metadata": {
+    "title": "Misja Hermes",
+    "description": "Misja Badawcza"
+  },
+  "Footer": {
+    "logout": "Wyloguj"
+  },
+  "Home": {
+    "research_toolbox": "Przybornik Badawczy",
+    "research_symbol": "Symbol Badawczy",
+    "knowledge_base": "Baza Wiedzy",
+    "research": "Zbadaj",
+    "number": "Liczba"
+  },
+  "Login": {
+    "welcome": "Witaj w Panelu Misji Hermesa",
+    "prepare": "Przygotuj się przed misją",
+    "here": "tutaj",
+    "login": "Zaloguj",
+    "last_name": "Nazwisko"
+  },
+  "Event": {
+    "past": "Przeszłość",
+    "alternate_past": "Alternatywna Przeszłość",
+    "your_past_event": "Twoja przeszłość jest pod numerem",
+    "go_back": "Powrót",
+    "not_found": "Nie znaleziono dokumentu"
+  },
+  "Error": {
+    "invalid_credentials": "Niepoprawne Dane"
+  }
+}
