@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const EnvironmentSchema = z.object({
   DATABASE_URL: z.string().default("file:./local.db"), // TODO: Figure this out
-  CONTENTFUL_ACCESS_TOKEN: z.string(),
+  CONTENTFUL_ACCESS_TOKEN: z.string().default("1234"), // TODO: Figure this out
 });
 
 const Environment = EnvironmentSchema.parse(process.env);

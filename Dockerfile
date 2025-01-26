@@ -30,7 +30,7 @@ COPY . .
 # Build application
 RUN npm run build
 
-RUN rm .env
+RUN touch .env && rm .env
 
 # Remove development dependencies
 RUN npm prune --omit=dev

@@ -8,14 +8,10 @@ import { zfd } from "zod-form-data";
 
 const activeEdgesTag = "activeEdges";
 
-export const getActiveNodes = unstable_cache(
-  async () => {
-    const data = await db.select().from(activeEdgesTable);
-    return new Set(data.filter((edge) => edge.active).map((edge) => edge.name));
-  },
-  ["getActiveNodes"],
-  { tags: [activeEdgesTag] }
-);
+export const getActiveNodes = async () => {
+  const data = await db.select().from(activeEdgesTable);
+  return new Set(data.filter((edge) => edge.active).map((edge) => edge.name));
+};
 
 export const getActiveEdgeData = unstable_cache(
   async (name: string) => {

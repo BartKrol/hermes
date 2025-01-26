@@ -39,7 +39,7 @@ function Hermes({
     const interval = setInterval(() => {
       const fetchActiveNodes = async () => {
         const newActiveNodes = await getActiveNodes();
-        setActiveNodes(newActiveNodes as Set<Nodes>);
+        setActiveNodes(new Set(newActiveNodes) as Set<Nodes>);
       };
 
       const fetchSettings = async () => {

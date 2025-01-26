@@ -10,6 +10,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed
 
-Main Page: [https://hermes.fly.dev]
-Hermes Graph: [https://hermes.fly.dev/hermes]
-Admin Panel: [https://hermes.fly.dev/admin]
+Main Page: [https://hermes.fly.dev](https://hermes.fly.dev)
+
+Hermes Graph: [https://hermes.fly.dev/hermes](https://hermes.fly.dev/hermes)
+
+Admin Panel: [https://hermes.fly.dev/admin](https://hermes.fly.dev/admin)
