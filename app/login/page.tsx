@@ -58,7 +58,7 @@ export default async function SignIn() {
 
       <footer className="py-4 text-center text-xs text-indigo-400/50 terminal-text">
         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent mx-auto mb-3"></div>
-        HERMES CORPORATION • TOP SECRET
+        NASA MISSION • TOP SECRET
       </footer>
     </div>
   );
