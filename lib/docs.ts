@@ -28,7 +28,9 @@ export async function cacheDoc(docId: string, docData: DocData) {
 }
 
 export async function getContent(docId: string): Promise<DocData> {
-  const document = await client.getEntry(docId);
+  const document = await client.getEntry(docId, {
+    locale: "en",
+  });
 
   return {
     title: document.fields["title"] as string,

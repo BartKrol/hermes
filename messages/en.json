@@ -1,0 +1,33 @@
+{
+  "Metadata": {
+    "title": "Hermes Mission",
+    "description": "Research Mission"
+  },
+  "Footer": {
+    "logout": "Logout"
+  },
+  "Home": {
+    "research_toolbox": "Research Toolbox",
+    "research_symbol": "Research Symbol",
+    "knowledge_base": "Knowledge Base",
+    "research": "Explore",
+    "number": "Number"
+  },
+  "Login": {
+    "welcome": "Welcome to the Hermes Mission Panel",
+    "prepare": "Prepare yourself before the mission",
+    "here": "here",
+    "login": "Login",
+    "last_name": "Last Name"
+  },
+  "Event": {
+    "past": "Past",
+    "alternate_past": "Alternate Past",
+    "your_past_event": "Your past event is under number",
+    "go_back": "Go Back",
+    "not_found": "Document not found"
+  },
+  "Error": {
+    "invalid_credentials": "Invalid Credentials"
+  }
+}
