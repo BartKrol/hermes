@@ -21,7 +21,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 
@@ -47,7 +48,7 @@ export function DateTimePicker({
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      time: date ? new Date(date) : undefined,
+      time: date ? new Date(date) : new Date(),
     },
   });
 
@@ -58,9 +59,6 @@ export function DateTimePicker({
 
   const handleTimeChange = (type: "hour" | "minute", value: string) => {
     const currentDate = form.getValues("time") || new Date();
-    const today = new Date();
-
-    currentDate.setDate(today.getDate());
 
     if (type === "hour") {
       const hour = parseInt(value, 10);
@@ -70,6 +68,19 @@ export function DateTimePicker({
     }
 
     form.setValue("time", currentDate);
+  };
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.value) return;
+
+    const selectedDate = new Date(e.target.value);
+    const currentDate = form.getValues("time") || new Date();
+
+    // Keep the time from the current value but update the date
+    selectedDate.setHours(currentDate.getHours());
+    selectedDate.setMinutes(currentDate.getMinutes());
+
+    form.setValue("time", selectedDate);
   };
 
   return (
@@ -100,64 +111,74 @@ export function DateTimePicker({
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0">
-                  <div className="sm:flex">
-                    <div className="flex flex-col sm:flex-row sm:h-[300px] divide-y sm:divide-y-0 sm:divide-x">
-                      <ScrollArea className="w-64 sm:w-auto">
-                        <div className="flex sm:flex-col p-2">
-                          {Array.from({ length: 24 }, (_, i) => i)
-                            .reverse()
-                            .map((hour) => (
+                <PopoverContent className="w-auto p-4" align="start">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-sm font-medium mb-2">Date</h3>
+                      <Input
+                        type="date"
+                        value={
+                          field.value ? format(field.value, "yyyy-MM-dd") : ""
+                        }
+                        onChange={handleDateChange}
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <h3 className="text-sm font-medium mb-2">Hours</h3>
+                        <ScrollArea className="h-[200px]">
+                          <div className="grid grid-cols-3 gap-1">
+                            {Array.from({ length: 24 }).map((_, i) => (
                               <Button
-                                key={hour}
-                                size="icon"
+                                key={i}
+                                size="sm"
                                 variant={
-                                  field.value && field.value.getHours() === hour
+                                  field.value && field.value.getHours() === i
                                     ? "default"
-                                    : "ghost"
+                                    : "outline"
                                 }
-                                className="sm:w-full shrink-0 aspect-square"
                                 onClick={() =>
-                                  handleTimeChange("hour", hour.toString())
+                                  handleTimeChange("hour", i.toString())
                                 }
+                                className="h-8"
                               >
-                                {hour}
+                                {i.toString().padStart(2, "0")}
                               </Button>
                             ))}
-                        </div>
-                        <ScrollBar
-                          orientation="horizontal"
-                          className="sm:hidden"
-                        />
-                      </ScrollArea>
-                      <ScrollArea className="w-64 sm:w-auto">
-                        <div className="flex sm:flex-col p-2">
-                          {Array.from({ length: 12 }, (_, i) => i * 5).map(
-                            (minute) => (
-                              <Button
-                                key={minute}
-                                size="icon"
-                                variant={
-                                  field.value &&
-                                  field.value.getMinutes() === minute
-                                    ? "default"
-                                    : "ghost"
-                                }
-                                className="sm:w-full shrink-0 aspect-square"
-                                onClick={() =>
-                                  handleTimeChange("minute", minute.toString())
-                                }
-                              >
-                                {minute.toString().padStart(2, "0")}
-                              </Button>
-                            )
-                          )}
-                        </div>
-                        <ScrollBar
-                          orientation="horizontal"
-                          className="sm:hidden"
-                        />
-                      </ScrollArea>
+                          </div>
+                        </ScrollArea>
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-medium mb-2">Minutes</h3>
+                        <ScrollArea className="h-[200px]">
+                          <div className="grid grid-cols-3 gap-1">
+                            {Array.from({ length: 12 }).map((_, i) => {
+                              const minute = i * 5;
+                              return (
+                                <Button
+                                  key={minute}
+                                  size="sm"
+                                  variant={
+                                    field.value &&
+                                    field.value.getMinutes() === minute
+                                      ? "default"
+                                      : "outline"
+                                  }
+                                  onClick={() =>
+                                    handleTimeChange(
+                                      "minute",
+                                      minute.toString()
+                                    )
+                                  }
+                                  className="h-8"
+                                >
+                                  {minute.toString().padStart(2, "0")}
+                                </Button>
+                              );
+                            })}
+                          </div>
+                        </ScrollArea>
+                      </div>
                     </div>
                   </div>
                 </PopoverContent>
