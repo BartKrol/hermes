@@ -1,19 +1,111 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "./globals.css";
 import { ThemeProvider } from "../components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/geist/geist-100.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-200.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-300.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-400.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-500.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-600.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-700.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-800.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist/geist-900.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: [
+    {
+      path: "../public/fonts/geist-mono/geist-mono-100.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-200.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-300.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-400.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-500.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-600.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-700.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-800.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/geist-mono/geist-mono-900.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export async function generateMetadata(): Promise<Metadata> {

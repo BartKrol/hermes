@@ -44,7 +44,7 @@ export default function Login({ onSignIn }: LoginProps) {
             id="name"
             name="name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value.toLowerCase())}
             placeholder={t("last_name")}
             className="pl-10 h-12 w-full bg-black/50 border-indigo-900/50 text-blue-200 placeholder:text-indigo-300/40 focus-visible:ring-blue-500"
             required
@@ -61,10 +61,10 @@ export default function Login({ onSignIn }: LoginProps) {
         <Button
           type="submit"
           disabled={isLoading || !name}
-          className="w-full py-6 bg-gradient-to-r from-blue-700 to-indigo-800 hover:brightness-110 transition-all"
+          className="w-full h-12 bg-gradient-to-r from-blue-700 to-indigo-800 hover:brightness-110 transition-all relative overflow-hidden"
         >
-          <span className="absolute inset-0 flex items-center justify-center">
-            <span className="absolute inset-0 bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors"></span>
+          <div className="absolute inset-0 bg-blue-500/20 hover:bg-blue-500/30 transition-colors"></div>
+          <div className="relative z-10 flex items-center justify-center">
             {isLoading ? (
               <LoadingSpinner />
             ) : (
@@ -73,7 +73,7 @@ export default function Login({ onSignIn }: LoginProps) {
                 <span className="font-bold tracking-wide">{t("login")}</span>
               </>
             )}
-          </span>
+          </div>
         </Button>
       </div>
     </form>
