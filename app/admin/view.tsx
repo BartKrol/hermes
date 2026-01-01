@@ -11,6 +11,7 @@ import { Switch } from "@/components/ui/switch";
 import { nodeToCharacters } from "@/lib/events";
 import { Settings } from "@/lib/settings";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 type AdminViewProps = {
   activeEdges: { id: number; name: string; active: number }[];
@@ -21,6 +22,7 @@ export default function AdminView({
   activeEdges: initialActiveEdges,
   settings: initialSettings,
 }: AdminViewProps) {
+  const t = useTranslations("Admin");
   const [activeEdges, setActiveEdges] = useState(initialActiveEdges);
   const [settings, setSettings] = useState(initialSettings);
   const [isRevalidating, setIsRevalidating] = useState(false);
@@ -59,14 +61,14 @@ export default function AdminView({
             setIsRevalidating(false);
           }}
         >
-          Revalidate
+          {t("revalidate")}
         </Button>
         {isRevalidating && <LoadingSpinner />}
       </div>
       <div className="flex flex-row gap-3 items-center">
         <DateTimePicker
           onSubmit={handleSetTime}
-          label="End Game"
+          label={t("end_game")}
           date={settings[Settings.EndTime]}
         />
       </div>

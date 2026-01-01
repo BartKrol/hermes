@@ -25,12 +25,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
-
-const FormSchema = z.object({
-  time: z.date({
-    required_error: "A date and time is required.",
-  }),
-});
+import { useTranslations } from "next-intl";
 
 export type DateTimePickerProps = {
   label: string;
@@ -45,6 +40,14 @@ export function DateTimePicker({
   description,
   onSubmit,
 }: DateTimePickerProps) {
+  const t = useTranslations("DateTimePicker");
+
+  const FormSchema = z.object({
+    time: z.date({
+      required_error: t("date_time_required"),
+    }),
+  });
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -105,7 +108,7 @@ export function DateTimePicker({
                       {field.value ? (
                         format(field.value, "MM/dd/yyyy HH:mm")
                       ) : (
-                        <span>MM/DD/YYYY HH:mm</span>
+                        <span>{t("date_placeholder")}</span>
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                     </Button>
@@ -114,7 +117,7 @@ export function DateTimePicker({
                 <PopoverContent className="w-auto p-4" align="start">
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-sm font-medium mb-2">Date</h3>
+                      <h3 className="text-sm font-medium mb-2">{t("date")}</h3>
                       <Input
                         type="date"
                         value={
@@ -125,7 +128,7 @@ export function DateTimePicker({
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <h3 className="text-sm font-medium mb-2">Hours</h3>
+                        <h3 className="text-sm font-medium mb-2">{t("hours")}</h3>
                         <ScrollArea className="h-[200px]">
                           <div className="grid grid-cols-3 gap-1">
                             {Array.from({ length: 24 }).map((_, i) => (
@@ -149,7 +152,7 @@ export function DateTimePicker({
                         </ScrollArea>
                       </div>
                       <div>
-                        <h3 className="text-sm font-medium mb-2">Minutes</h3>
+                        <h3 className="text-sm font-medium mb-2">{t("minutes")}</h3>
                         <ScrollArea className="h-[200px]">
                           <div className="grid grid-cols-3 gap-1">
                             {Array.from({ length: 12 }).map((_, i) => {
@@ -188,7 +191,7 @@ export function DateTimePicker({
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{t("submit")}</Button>
       </form>
     </Form>
   );

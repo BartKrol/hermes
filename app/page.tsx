@@ -103,7 +103,7 @@ export default async function Home() {
                       {data.number}
                     </span>
                     <div className="text-xs text-indigo-400/70 mt-1 terminal-text tracking-wider">
-                      SEQUENCE CODE
+                      {t("sequence_code")}
                     </div>
                   </div>
                 </CardContent>

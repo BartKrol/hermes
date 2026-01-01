@@ -17,10 +17,10 @@ export default async function SignIn() {
       <header className="pt-6 pb-2 px-4">
         <div className="w-full text-center">
           <h1 className="text-2xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 alien-text-glow">
-            HERMES MISSION
+            {t("mission_title")}
           </h1>
           <div className="text-xs text-indigo-300/70 mt-1 terminal-text tracking-wider">
-            ALIEN ARTIFACT INTERFACE
+            {t("interface_subtitle")}
           </div>
         </div>
       </header>
@@ -35,7 +35,7 @@ export default async function SignIn() {
               {t("welcome")}
             </h2>
             <p className="text-sm text-indigo-300/80 terminal-text">
-              ENTER CREDENTIALS TO ACCESS SYSTEM
+              {t("enter_credentials")}
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default async function SignIn() {
 
       <footer className="py-4 text-center text-xs text-indigo-400/50 terminal-text">
         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent mx-auto mb-3"></div>
-        NASA MISSION • TOP SECRET
+        {t("footer_text")}
       </footer>
     </div>
   );

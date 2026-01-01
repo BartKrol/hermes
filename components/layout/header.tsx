@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export type HeaderProps = {
@@ -5,6 +6,8 @@ export type HeaderProps = {
 };
 
 export default function Header({ name }: HeaderProps) {
+  const t = useTranslations("Header");
+
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-gradient-to-r from-black via-slate-900/90 to-black backdrop-blur-md px-4 py-5 flex justify-between items-center border-b border-indigo-900/30 shadow-xl">
@@ -20,7 +23,7 @@ export default function Header({ name }: HeaderProps) {
         {name && (
           <nav>
             <div className="flex items-center space-x-2 text-white bg-black/40 px-3 py-1.5 rounded-md text-sm backdrop-blur-md border border-indigo-900/30 shadow-inner shadow-indigo-900/5">
-              <span className="text-xs text-indigo-400/70">AGENT:</span>
+              <span className="text-xs text-indigo-400/70">{t("agent")}</span>
               <span className="font-medium text-blue-100/90">{name}</span>
             </div>
           </nav>

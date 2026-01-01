@@ -28,7 +28,7 @@ export default function Login({ onSignIn }: LoginProps) {
       router.push("/");
     } catch (e) {
       console.log(e);
-      toast.error("Error!");
+      toast.error(t("error"));
     }
     setIsLoading(false);
   };
@@ -38,7 +38,7 @@ export default function Login({ onSignIn }: LoginProps) {
       <div className="space-y-4">
         <div className="relative">
           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-indigo-400/70 text-sm">
-            ID:
+            {t("id_label")}
           </div>
           <Input
             id="name"

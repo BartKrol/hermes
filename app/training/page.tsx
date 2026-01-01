@@ -3,18 +3,21 @@ import { ResearchInput } from "@/components/research-input";
 import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/layout/footer";
 import { trainingSymbols } from "@/lib/symbols";
+import { getTranslations } from "next-intl/server";
 
 export default async function Training() {
+  const t = await getTranslations("Home");
+
   return (
     <div className="flex flex-col min-h-screen justify-between">
       <Header />
       <main className="flex flex-col container mx-auto px-4 flex-grow gap-8">
         <div className="flex flex-col gap-6 pt-2">
-          <h2 className="text-2xl font-semibold">Przybornk Badawczy</h2>
+          <h2 className="text-2xl font-semibold">{t("research_toolbox")}</h2>
           <ResearchInput training />
         </div>
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Baza Wiedzy</h2>
+          <h2 className="text-2xl font-semibold mb-4">{t("knowledge_base")}</h2>
           {trainingSymbols.map((data) => (
             <Card className="m-4" key={data.symbol}>
               <CardContent className="flex flex-row justify-between items-center">

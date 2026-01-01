@@ -11,14 +11,21 @@
     "research_symbol": "Research Symbol",
     "knowledge_base": "Knowledge Base",
     "research": "Explore",
-    "number": "Number"
+    "number": "Number",
+    "sequence_code": "SEQUENCE CODE"
   },
   "Login": {
     "welcome": "Welcome to the Hermes Mission Panel",
     "prepare": "Prepare yourself before the mission",
     "here": "here",
     "login": "Login",
-    "last_name": "Last Name"
+    "last_name": "Last Name",
+    "mission_title": "HERMES MISSION",
+    "interface_subtitle": "ALIEN ARTIFACT INTERFACE",
+    "enter_credentials": "ENTER CREDENTIALS TO ACCESS SYSTEM",
+    "footer_text": "NASA MISSION • TOP SECRET",
+    "error": "Error!",
+    "id_label": "ID:"
   },
   "Event": {
     "past": "Past",
@@ -29,5 +36,20 @@
   },
   "Error": {
     "invalid_credentials": "Invalid Credentials"
+  },
+  "Header": {
+    "agent": "AGENT:"
+  },
+  "Admin": {
+    "revalidate": "Revalidate",
+    "end_game": "End Game"
+  },
+  "DateTimePicker": {
+    "date_time_required": "A date and time is required.",
+    "date_placeholder": "MM/DD/YYYY HH:mm",
+    "date": "Date",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "submit": "Submit"
   }
 }
